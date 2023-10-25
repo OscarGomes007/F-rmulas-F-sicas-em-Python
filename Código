@@ -1,0 +1,41 @@
+import math
+
+m1 = float(input("Digite a massa do objeto 1 em kg: "))
+m2 = float(input("Digite a massa do objeto 2 em kg: "))
+r = float(input("Digite a distância entre os objetos em metros: "))
+
+m = float(input("Digite a massa do objeto em kg: "))
+a = float(input("Digite a aceleração do objeto em m/s^2: "))
+
+V = float(input("Digite a voltagem (tensão) em volts: "))
+R = float(input("Digite a resistência elétrica em ohms: "))
+
+m_objeto = float(input("Digite a massa do objeto em kg: "))
+v_objeto = float(input("Digite a velocidade do objeto em m/s: "))
+
+h = float(input("Digite a altura do objeto em metros: "))
+g = 9.81  # Valor padrão para a aceleração devida à gravidade na superfície da Terra em m/s^2
+
+# Calculando os resultados usando as fórmulas
+# Lei da Gravitação Universal de Newton
+F_gravitacional = 6.67430e-11 * (m1 * m2) / r**2
+
+# Segunda Lei de Newton (Lei da Força)
+F_forca = m * a
+
+# Lei de Ohm
+I = V / R
+
+# Energia Cinética
+E_cinetica = 0.5 * m_objeto * v_objeto**2
+
+# Energia Potencial Gravitacional
+U_gravitacional = m_objeto * g * h
+
+# Exibindo os resultados
+print("\nResultados:")
+print("Força gravitacional entre os objetos: {:.2f} N".format(F_gravitacional))
+print("Força aplicada ao objeto: {:.2f} N".format(F_forca))
+print("Corrente elétrica: {:.2f} A".format(I))
+print("Energia cinética do objeto: {:.2f} Joules".format(E_cinetica))
+print("Energia potencial gravitacional do objeto: {:.2f} Joules".format(U_gravitacional))
